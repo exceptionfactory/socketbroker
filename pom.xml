@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.exceptionfactory.socketbroker</groupId>
+    <artifactId>socketbroker</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
+    <packaging>jar</packaging>
+
+    <name>socketbroker</name>
+    <description>Java Socket library supporting SOCKS and HTTP proxy servers with authentication</description>
+    <url>https://github.com/exceptionfactory/socketbroker</url>
+    <inceptionYear>2021</inceptionYear>
+    <organization>
+        <name>ExceptionFactory</name>
+        <url>https://exceptionfactory.com</url>
+    </organization>
+
+    <licenses>
+        <license>
+            <name>Apache License 2.0</name>
+            <url>https://www.apache.org/licenses/LICENSE-2.0</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
+
+    <developers>
+        <developer>
+            <name>ExceptionFactory</name>
+            <email>exceptionfactory@exceptionfactory.com</email>
+            <organization>ExceptionFactory</organization>
+            <organizationUrl>https://exceptionfactory.com</organizationUrl>
+        </developer>
+    </developers>
+
+    <scm>
+        <connection>scm:git:git://github.com/exceptionfactory/socketbroker.git</connection>
+        <developerConnection>scm:git:ssh://github.com:exceptionfactory/socketbroker.git</developerConnection>
+        <url>https://github.com/exceptionfactory/socketbroker</url>
+    </scm>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <maven.compiler.source>8</maven.compiler.source>
+        <maven.compiler.target>8</maven.compiler.target>
+        <maven.checkstyle.plugin.version>3.1.2</maven.checkstyle.plugin.version>
+        <maven.clean.plugin.version>3.1.0</maven.clean.plugin.version>
+        <maven.compiler.plugin.version>3.8.1</maven.compiler.plugin.version>
+        <maven.install.plugin.version>3.0.0-M1</maven.install.plugin.version>
+        <maven.jar.plugin.version>3.2.0</maven.jar.plugin.version>
+        <maven.javadoc.plugin.version>3.3.0</maven.javadoc.plugin.version>
+        <maven.pmd.plugin.version>3.15.0</maven.pmd.plugin.version>
+        <maven.resources.plugin.version>3.2.0</maven.resources.plugin.version>
+        <maven.source.plugin.version>3.2.0</maven.source.plugin.version>
+        <maven.surefire.plugin.version>3.0.0-M5</maven.surefire.plugin.version>
+        <checkstyle.version>9.2</checkstyle.version>
+        <jacoco.version>0.8.7</jacoco.version>
+        <junit.jupiter.version>5.8.2</junit.jupiter.version>
+        <mockito.version>4.2.0</mockito.version>
+        <pmd.version>6.41.0</pmd.version>
+        <spotbugs.plugin.version>4.5.2.0</spotbugs.plugin.version>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-api</artifactId>
+            <version>${junit.jupiter.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-params</artifactId>
+            <version>${junit.jupiter.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-engine</artifactId>
+            <version>${junit.jupiter.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.mockito</groupId>
+            <artifactId>mockito-core</artifactId>
+            <version>${mockito.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.mockito</groupId>
+            <artifactId>mockito-junit-jupiter</artifactId>
+            <version>${mockito.version}</version>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-checkstyle-plugin</artifactId>
+                    <version>${maven.checkstyle.plugin.version}</version>
+                    <dependencies>
+                        <dependency>
+                            <groupId>com.puppycrawl.tools</groupId>
+                            <artifactId>checkstyle</artifactId>
+                            <version>${checkstyle.version}</version>
+                        </dependency>
+                    </dependencies>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-compiler-plugin</artifactId>
+                    <version>${maven.compiler.plugin.version}</version>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-install-plugin</artifactId>
+                    <version>${maven.install.plugin.version}</version>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-jar-plugin</artifactId>
+                    <version>${maven.jar.plugin.version}</version>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-javadoc-plugin</artifactId>
+                    <version>${maven.javadoc.plugin.version}</version>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-pmd-plugin</artifactId>
+                    <version>${maven.pmd.plugin.version}</version>
+                    <dependencies>
+                        <dependency>
+                            <groupId>net.sourceforge.pmd</groupId>
+                            <artifactId>pmd-core</artifactId>
+                            <version>${pmd.version}</version>
+                        </dependency>
+                        <dependency>
+                            <groupId>net.sourceforge.pmd</groupId>
+                            <artifactId>pmd-java</artifactId>
+                            <version>${pmd.version}</version>
+                        </dependency>
+                    </dependencies>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-resources-plugin</artifactId>
+                    <version>${maven.resources.plugin.version}</version>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-source-plugin</artifactId>
+                    <version>${maven.source.plugin.version}</version>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-surefire-plugin</artifactId>
+                    <version>${maven.surefire.plugin.version}</version>
+                </plugin>
+                <plugin>
+                    <groupId>org.jacoco</groupId>
+                    <artifactId>jacoco-maven-plugin</artifactId>
+                    <version>${jacoco.version}</version>
+                </plugin>
+                <plugin>
+                    <groupId>com.github.spotbugs</groupId>
+                    <artifactId>spotbugs-maven-plugin</artifactId>
+                    <version>${spotbugs.plugin.version}</version>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-javadoc-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <id>attach-javadocs</id>
+                        <goals>
+                            <goal>jar</goal>
+                        </goals>
+                        <configuration>
+                            <quiet>true</quiet>
+                            <failOnWarnings>true</failOnWarnings>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-source-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <id>attach-sources</id>
+                        <goals>
+                            <goal>jar</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-checkstyle-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <id>check</id>
+                        <goals>
+                            <goal>check</goal>
+                        </goals>
+                        <configuration>
+                            <includeTestSourceDirectory>true</includeTestSourceDirectory>
+                            <checkstyleRules>
+                                <module name="Checker">
+                                    <module name="Header">
+                                        <property name="headerFile" value="HEADER"/>
+                                    </module>
+                                    <module name="NewlineAtEndOfFile"/>
+                                    <module name="FileLength"/>
+                                    <module name="LineLength">
+                                        <property name="max" value="200"/>
+                                    </module>
+                                    <module name="FileTabCharacter"/>
+                                    <module name="RegexpSingleline">
+                                        <property name="format" value="\s+$"/>
+                                        <property name="minimum" value="0"/>
+                                        <property name="maximum" value="0"/>
+                                        <property name="message" value="Line has trailing spaces."/>
+                                    </module>
+                                    <module name="TreeWalker">
+                                        <module name="InvalidJavadocPosition"/>
+                                        <module name="JavadocMethod"/>
+                                        <module name="JavadocType"/>
+                                        <module name="ConstantName"/>
+                                        <module name="LocalFinalVariableName"/>
+                                        <module name="LocalVariableName"/>
+                                        <module name="MemberName"/>
+                                        <module name="MethodName"/>
+                                        <module name="PackageName"/>
+                                        <module name="ParameterName"/>
+                                        <module name="StaticVariableName"/>
+                                        <module name="TypeName"/>
+                                        <module name="AvoidStarImport"/>
+                                        <module name="IllegalImport"/>
+                                        <module name="RedundantImport"/>
+                                        <module name="UnusedImports"/>
+                                        <module name="MethodLength"/>
+                                        <module name="ParameterNumber"/>
+                                        <module name="EmptyForIteratorPad"/>
+                                        <module name="GenericWhitespace"/>
+                                        <module name="MethodParamPad"/>
+                                        <module name="NoWhitespaceAfter"/>
+                                        <module name="NoWhitespaceBefore"/>
+                                        <module name="OperatorWrap"/>
+                                        <module name="ParenPad"/>
+                                        <module name="TypecastParenPad"/>
+                                        <module name="WhitespaceAfter"/>
+                                        <module name="WhitespaceAround"/>
+                                        <module name="ModifierOrder"/>
+                                        <module name="RedundantModifier"/>
+                                        <module name="AvoidNestedBlocks"/>
+                                        <module name="EmptyBlock"/>
+                                        <module name="LeftCurly"/>
+                                        <module name="NeedBraces"/>
+                                        <module name="RightCurly"/>
+                                        <module name="EmptyStatement"/>
+                                        <module name="EqualsHashCode"/>
+                                        <module name="IllegalInstantiation"/>
+                                        <module name="InnerAssignment"/>
+                                        <module name="MagicNumber"/>
+                                        <module name="MissingSwitchDefault"/>
+                                        <module name="MultipleVariableDeclarations"/>
+                                        <module name="SimplifyBooleanExpression"/>
+                                        <module name="SimplifyBooleanReturn"/>
+                                        <module name="FinalClass"/>
+                                        <module name="HideUtilityClassConstructor"/>
+                                        <module name="InterfaceIsType"/>
+                                        <module name="VisibilityModifier"/>
+                                        <module name="ArrayTypeStyle"/>
+                                        <module name="FinalParameters"/>
+                                        <module name="TodoComment"/>
+                                        <module name="UpperEll"/>
+                                    </module>
+                                </module>
+                            </checkstyleRules>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-pmd-plugin</artifactId>
+                <configuration>
+                    <printFailingErrors>true</printFailingErrors>
+                    <linkXRef>false</linkXRef>
+                </configuration>
+                <executions>
+                    <execution>
+                        <id>check</id>
+                        <goals>
+                            <goal>check</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.jacoco</groupId>
+                <artifactId>jacoco-maven-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <id>prepare-agent</id>
+                        <goals>
+                            <goal>prepare-agent</goal>
+                        </goals>
+                    </execution>
+                    <execution>
+                        <id>report</id>
+                        <phase>verify</phase>
+                        <goals>
+                            <goal>report</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>com.github.spotbugs</groupId>
+                <artifactId>spotbugs-maven-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <id>check</id>
+                        <phase>verify</phase>
+                        <goals>
+                            <goal>check</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+</project>
