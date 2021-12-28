@@ -1,6 +1,7 @@
 # Socket Broker
 
 [![build](https://github.com/exceptionfactory/socketbroker/actions/workflows/build.yml/badge.svg)](https://github.com/exceptionfactory/socketbroker/actions/workflows/build.yml)
+[![codecov](https://codecov.io/gh/exceptionfactory/socketbroker/branch/main/graph/badge.svg?token=XM99GMCJGT)](https://codecov.io/gh/exceptionfactory/socketbroker)
 
 Java Socket library supporting SOCKS and HTTP proxy servers with authentication 
 
