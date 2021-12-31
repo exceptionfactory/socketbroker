@@ -3,6 +3,7 @@
 [![build](https://github.com/exceptionfactory/socketbroker/actions/workflows/build.yml/badge.svg)](https://github.com/exceptionfactory/socketbroker/actions/workflows/build.yml)
 [![codecov](https://codecov.io/gh/exceptionfactory/socketbroker/branch/main/graph/badge.svg?token=XM99GMCJGT)](https://codecov.io/gh/exceptionfactory/socketbroker)
 [![vulnerabilities](https://snyk.io/test/github/exceptionfactory/socketbroker/badge.svg)](https://snyk.io/test/github/exceptionfactory/socketbroker)
+[![javadoc](https://javadoc.io/badge2/com.exceptionfactory.socketbroker/socketbroker/javadoc.svg)](https://javadoc.io/doc/com.exceptionfactory.socketbroker/socketbroker)
 
 Java Socket library supporting SOCKS and HTTP proxy servers with authentication 
 
