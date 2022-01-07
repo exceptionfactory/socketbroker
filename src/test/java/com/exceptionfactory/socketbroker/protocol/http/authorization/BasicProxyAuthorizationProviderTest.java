@@ -45,7 +45,7 @@ public class BasicProxyAuthorizationProviderTest {
 
     private static final char[] UNICODE_PASSWORD = Character.toChars(937);
 
-    private static final String UNICODE_CREDENTIALS = "Basic zpHOqTrOqQA=";
+    private static final String UNICODE_CREDENTIALS = "Basic zpHOqTrOqQ==";
 
     @Mock
     private AuthenticationCredentials authenticationCredentials;

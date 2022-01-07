@@ -16,26 +16,25 @@
 package com.exceptionfactory.socketbroker.protocol;
 
 import java.nio.ByteBuffer;
-import java.nio.CharBuffer;
-import java.nio.charset.StandardCharsets;
 import java.util.Objects;
 
 /**
- * Unicode Standard Character Array Encoder converts provided sources to byte arrays using UTF-8 encoding
+ * ByteBuffer Encoder reads populated byte array contents of the provided buffer
  */
-public class UnicodeStandardCharacterArrayEncoder implements PacketEncoder<char[]> {
-    private static final PacketEncoder<ByteBuffer> BYTE_BUFFER_ENCODER = new ByteBufferEncoder();
-
+public class ByteBufferEncoder implements PacketEncoder<ByteBuffer> {
     /**
-     * Get bytes encoded using UTF-8
+     * Get encoded buffer after rewinding and read byte array based on the buffer limit length
      *
-     * @param characters Characters to be encoded
-     * @return Bytes encoded using UTF-8
+     * @param buffer Byte Buffer to be read
+     * @return Bytes read
      */
     @Override
-    public byte[] getEncoded(final char[] characters) {
-        final CharBuffer buffer = CharBuffer.wrap(Objects.requireNonNull(characters));
-        final ByteBuffer byteBuffer = StandardCharsets.UTF_8.encode(buffer);
-        return BYTE_BUFFER_ENCODER.getEncoded(byteBuffer);
+    public byte[] getEncoded(final ByteBuffer buffer) {
+        Objects.requireNonNull(buffer, "Buffer required");
+        buffer.rewind();
+        final int length = buffer.limit();
+        final byte[] encoded = new byte[length];
+        buffer.get(encoded);
+        return encoded;
     }
 }

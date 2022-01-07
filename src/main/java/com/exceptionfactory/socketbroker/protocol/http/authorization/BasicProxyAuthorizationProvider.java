@@ -17,6 +17,7 @@ package com.exceptionfactory.socketbroker.protocol.http.authorization;
 
 import com.exceptionfactory.socketbroker.configuration.AuthenticationCredentials;
 import com.exceptionfactory.socketbroker.configuration.UsernamePasswordAuthenticationCredentials;
+import com.exceptionfactory.socketbroker.protocol.ByteBufferEncoder;
 import com.exceptionfactory.socketbroker.protocol.PacketEncoder;
 import com.exceptionfactory.socketbroker.protocol.UnicodeStandardCharacterArrayEncoder;
 import com.exceptionfactory.socketbroker.protocol.UnicodeStandardStringEncoder;
@@ -35,6 +36,8 @@ public class BasicProxyAuthorizationProvider implements ProxyAuthorizationProvid
     private static final PacketEncoder<String> STRING_ENCODER = new UnicodeStandardStringEncoder();
 
     private static final PacketEncoder<char[]> CHARACTER_ARRAY_ENCODER = new UnicodeStandardCharacterArrayEncoder();
+
+    private static final PacketEncoder<ByteBuffer> BYTE_BUFFER_ENCODER = new ByteBufferEncoder();
 
     private static final byte COLON_SEPARATOR = ':';
 
@@ -77,6 +80,7 @@ public class BasicProxyAuthorizationProvider implements ProxyAuthorizationProvid
         buffer.put(COLON_SEPARATOR);
         buffer.put(password);
 
-        return ENCODER.encodeToString(buffer.array());
+        final byte[] encodedBuffer = BYTE_BUFFER_ENCODER.getEncoded(buffer);
+        return ENCODER.encodeToString(encodedBuffer);
     }
 }
