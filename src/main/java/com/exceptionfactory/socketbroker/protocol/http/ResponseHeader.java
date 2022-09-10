@@ -28,6 +28,11 @@ public enum ResponseHeader {
         this.header = header;
     }
 
+    /**
+     * Get HTTP header as represented in responses
+     *
+     * @return HTTP header
+     */
     public String getHeader() {
         return header;
     }

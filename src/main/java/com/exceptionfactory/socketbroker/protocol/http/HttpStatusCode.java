@@ -34,6 +34,11 @@ public enum HttpStatusCode {
         this.statusCode = statusCode;
     }
 
+    /**
+     * Get HTTP status code number
+     *
+     * @return HTTP status code number
+     */
     public int getStatusCode() {
         return statusCode;
     }

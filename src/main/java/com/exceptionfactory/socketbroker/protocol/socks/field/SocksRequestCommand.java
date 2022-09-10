@@ -19,6 +19,7 @@ package com.exceptionfactory.socketbroker.protocol.socks.field;
  * SOCKS 5 Request Command defined in RFC 1928 Section 4
  */
 public enum SocksRequestCommand {
+    /** Connect command */
     CONNECT(1);
 
     private final byte command;
@@ -27,6 +28,11 @@ public enum SocksRequestCommand {
         this.command = (byte) command;
     }
 
+    /**
+     * Get command code as represented in packets
+     *
+     * @return Command code
+     */
     public byte getCommand() {
         return command;
     }

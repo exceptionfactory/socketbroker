@@ -19,6 +19,7 @@ package com.exceptionfactory.socketbroker.protocol.socks.field;
  * SOCKS 5 Version according to RFC 1928 Section 3
  */
 public enum SocksVersion implements SocksMessageCode {
+    /** Version 5 */
     VERSION_5(5);
 
     private final int code;
@@ -27,6 +28,11 @@ public enum SocksVersion implements SocksMessageCode {
         this.code = code;
     }
 
+    /**
+     * Get version code as represented in packets
+     *
+     * @return Version code
+     */
     @Override
     public int getCode() {
         return code;

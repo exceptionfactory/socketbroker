@@ -19,10 +19,13 @@ package com.exceptionfactory.socketbroker.protocol.socks.field;
  * SOCKS 5 Address Type defined in RFC 1928 Section 5
  */
 public enum SocksAddressType implements SocksMessageCode {
+    /** Internet Protocol Version 4 Address */
     IP_V4_ADDRESS(1),
 
+    /** Domain Name Service Address */
     DOMAIN_NAME(3),
 
+    /** Internet Protocol Version 6 Address */
     IP_V6_ADDRESS(4);
 
     private final int code;
@@ -31,6 +34,11 @@ public enum SocksAddressType implements SocksMessageCode {
         this.code = code;
     }
 
+    /**
+     * Get address type code as represented in packets
+     *
+     * @return Address type code
+     */
     @Override
     public int getCode() {
         return code;

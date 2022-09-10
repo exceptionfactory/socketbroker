@@ -31,6 +31,11 @@ public enum RequestHeader {
         this.header = header;
     }
 
+    /**
+     * Get HTTP header as represented in requests
+     *
+     * @return HTTP header
+     */
     public String getHeader() {
         return header;
     }

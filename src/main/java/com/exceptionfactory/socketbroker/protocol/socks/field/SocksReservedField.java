@@ -19,6 +19,7 @@ package com.exceptionfactory.socketbroker.protocol.socks.field;
  * SOCKS 5 Reserved Field
  */
 public enum SocksReservedField implements SocksMessageCode {
+    /** Reserved */
     RESERVED(0);
 
     private final int code;
@@ -27,6 +28,11 @@ public enum SocksReservedField implements SocksMessageCode {
         this.code = code;
     }
 
+    /**
+     * Get reserved code as represented in packets
+     *
+     * @return Reserved code
+     */
     public int getCode() {
         return code;
     }

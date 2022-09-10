@@ -19,12 +19,16 @@ package com.exceptionfactory.socketbroker.protocol.http;
  * Standard delimiters for HTTP requests and responses
  */
 public enum HttpDelimiter {
+    /** Colon character */
     COLON(':'),
 
+    /** Space character */
     SPACE(' '),
 
+    /** Carriage Return character */
     CR('\r'),
 
+    /** Line Feed character */
     LF('\n');
 
     private final char delimiter;
@@ -33,6 +37,11 @@ public enum HttpDelimiter {
         this.delimiter = delimiter;
     }
 
+    /**
+     * Get delimiter character
+     *
+     * @return Delimiter character
+     */
     public char getDelimiter() {
         return delimiter;
     }

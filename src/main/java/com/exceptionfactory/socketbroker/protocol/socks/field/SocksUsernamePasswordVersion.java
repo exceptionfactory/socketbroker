@@ -19,6 +19,7 @@ package com.exceptionfactory.socketbroker.protocol.socks.field;
  * SOCKS 5 Username Password Version defined in RFC 1929
  */
 public enum SocksUsernamePasswordVersion implements SocksMessageCode {
+    /** Version 1 */
     VERSION_1(1);
 
     private final int code;
@@ -27,6 +28,11 @@ public enum SocksUsernamePasswordVersion implements SocksMessageCode {
         this.code = code;
     }
 
+    /**
+     * Get version code as represented in packets
+     *
+     * @return Version code
+     */
     public int getCode() {
         return code;
     }

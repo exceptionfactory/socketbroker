@@ -19,8 +19,10 @@ package com.exceptionfactory.socketbroker.protocol.http;
  * HTTP Protocol Version
  */
 public enum ProtocolVersion {
+    /** HTTP version 1.0 */
     HTTP_1_0("HTTP/1.0"),
 
+    /** HTTP version 1.1 */
     HTTP_1_1("HTTP/1.1");
 
     private final String protocol;
@@ -29,6 +31,11 @@ public enum ProtocolVersion {
         this.protocol = protocol;
     }
 
+    /**
+     * Get HTTP protocol version as represented in responses
+     *
+     * @return HTTP protocol version
+     */
     public String getProtocol() {
         return protocol;
     }

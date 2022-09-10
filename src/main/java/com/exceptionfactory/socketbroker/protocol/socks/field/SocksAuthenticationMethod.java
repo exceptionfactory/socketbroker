@@ -19,12 +19,16 @@ package com.exceptionfactory.socketbroker.protocol.socks.field;
  * SOCKS 5 Authentication Methods according to RFC 1928 Section 3
  */
 public enum SocksAuthenticationMethod implements SocksMessageCode {
+    /** No Authentication Required */
     NO_AUTHENTICATION_REQUIRED(0),
 
+    /** General Security Services Application Program Interface method */
     GSSAPI(1),
 
+    /** Username and Password method */
     USERNAME_PASSWORD(2),
 
+    /** No Acceptable Methods */
     NO_ACCEPTABLE_METHODS(255);
 
     private final int code;
@@ -33,6 +37,11 @@ public enum SocksAuthenticationMethod implements SocksMessageCode {
         this.code = code;
     }
 
+    /**
+     * Get authentication method code as represented in packets
+     *
+     * @return Authentication methode code
+     */
     public int getCode() {
         return code;
     }

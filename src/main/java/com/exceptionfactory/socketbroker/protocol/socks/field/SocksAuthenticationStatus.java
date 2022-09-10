@@ -19,6 +19,7 @@ package com.exceptionfactory.socketbroker.protocol.socks.field;
  * SOCKS 5 Authentication Status according to RFC 1929
  */
 public enum SocksAuthenticationStatus implements SocksMessageCode {
+    /** Success status */
     SUCCESS(0);
 
     private final int code;
@@ -27,6 +28,11 @@ public enum SocksAuthenticationStatus implements SocksMessageCode {
         this.code = code;
     }
 
+    /**
+     * Get authentication status code as represented in packets
+     *
+     * @return Authentication status code
+     */
     @Override
     public int getCode() {
         return code;
