@@ -8,10 +8,14 @@
 
 Java Socket library supporting SOCKS and HTTP proxy servers with authentication 
 
-# Requirements
+# Build Requirements
+
+- Java 17
+- Maven 3.6.0
+
+# Runtime Requirements
 
 - Java 8
-- Maven 3
 
 # Versioning
 
