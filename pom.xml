@@ -45,23 +45,23 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <maven.compiler.release>8</maven.compiler.release>
-        <maven.checkstyle.plugin.version>3.2.1</maven.checkstyle.plugin.version>
+        <maven.checkstyle.plugin.version>3.3.0</maven.checkstyle.plugin.version>
         <maven.clean.plugin.version>3.2.0</maven.clean.plugin.version>
         <maven.compiler.plugin.version>3.11.0</maven.compiler.plugin.version>
         <maven.deploy.plugin.version>3.1.1</maven.deploy.plugin.version>
         <maven.install.plugin.version>3.1.1</maven.install.plugin.version>
         <maven.jar.plugin.version>3.3.0</maven.jar.plugin.version>
         <maven.javadoc.plugin.version>3.5.0</maven.javadoc.plugin.version>
-        <maven.pmd.plugin.version>3.20.0</maven.pmd.plugin.version>
+        <maven.pmd.plugin.version>3.21.0</maven.pmd.plugin.version>
         <maven.resources.plugin.version>3.3.1</maven.resources.plugin.version>
-        <maven.source.plugin.version>3.2.1</maven.source.plugin.version>
-        <maven.surefire.plugin.version>3.0.0</maven.surefire.plugin.version>
-        <checkstyle.version>10.5.0</checkstyle.version>
-        <jacoco.version>0.8.9</jacoco.version>
-        <junit.jupiter.version>5.9.2</junit.jupiter.version>
-        <mockito.version>5.2.0</mockito.version>
+        <maven.source.plugin.version>3.3.0</maven.source.plugin.version>
+        <maven.surefire.plugin.version>3.1.2</maven.surefire.plugin.version>
+        <checkstyle.version>10.12.0</checkstyle.version>
+        <jacoco.version>0.8.10</jacoco.version>
+        <junit.jupiter.version>5.9.3</junit.jupiter.version>
+        <mockito.version>5.4.0</mockito.version>
         <pmd.version>6.55.0</pmd.version>
-        <spotbugs.plugin.version>4.7.3.4</spotbugs.plugin.version>
+        <spotbugs.plugin.version>4.7.3.5</spotbugs.plugin.version>
     </properties>
 
     <dependencies>
