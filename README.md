@@ -11,7 +11,7 @@ Java Socket library supporting SOCKS and HTTP proxy servers with authentication
 # Build Requirements
 
 - Java 17
-- Maven 3.6.0
+- Maven 3.9
 
 # Runtime Requirements
 
@@ -46,7 +46,7 @@ Socket Broker supports client capabilities for several protocols defined in refe
 Run the following Maven command to build the library:
 
 ```
-mvn clean install
+./mvnw clean install
 ```
 
 # Integrating
