@@ -46,7 +46,7 @@
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <maven.compiler.release>8</maven.compiler.release>
         <maven.checkstyle.plugin.version>3.3.0</maven.checkstyle.plugin.version>
-        <maven.clean.plugin.version>3.2.0</maven.clean.plugin.version>
+        <maven.clean.plugin.version>3.3.1</maven.clean.plugin.version>
         <maven.compiler.plugin.version>3.11.0</maven.compiler.plugin.version>
         <maven.deploy.plugin.version>3.1.1</maven.deploy.plugin.version>
         <maven.install.plugin.version>3.1.1</maven.install.plugin.version>
@@ -56,7 +56,7 @@
         <maven.resources.plugin.version>3.3.1</maven.resources.plugin.version>
         <maven.source.plugin.version>3.3.0</maven.source.plugin.version>
         <maven.surefire.plugin.version>3.1.2</maven.surefire.plugin.version>
-        <checkstyle.version>10.12.0</checkstyle.version>
+        <checkstyle.version>10.12.2</checkstyle.version>
         <jacoco.version>0.8.10</jacoco.version>
         <jreleaser.version>1.7.0</jreleaser.version>
         <junit.jupiter.version>5.10.0</junit.jupiter.version>
