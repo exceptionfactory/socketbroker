@@ -393,6 +393,11 @@
                                 </nexus2>
                             </maven>
                         </deploy>
+                        <release>
+                            <github>
+                                <enabled>false</enabled>
+                            </github>
+                        </release>
                     </jreleaser>
                 </configuration>
             </plugin>
