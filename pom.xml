@@ -386,8 +386,8 @@
                                         <active>ALWAYS</active>
                                         <url>${maven.central.url}/service/local</url>
                                         <snapshotUrl>${maven.central.url}/content/repositories/snapshots/</snapshotUrl>
-                                        <closeRepository>false</closeRepository>
-                                        <releaseRepository>false</releaseRepository>
+                                        <closeRepository>true</closeRepository>
+                                        <releaseRepository>true</releaseRepository>
                                         <stagingRepositories>target/staging-deploy</stagingRepositories>
                                     </maven-central>
                                 </nexus2>
