@@ -23,6 +23,13 @@ import java.util.Objects;
  */
 public class StringEncoder implements PacketEncoder<String> {
     /**
+     * Default constructor for Byte Buffer Encoder
+     */
+    public StringEncoder() {
+
+    }
+
+    /**
      * Get bytes encoded using US-ASCII
      *
      * @param packet Packet to be encoded

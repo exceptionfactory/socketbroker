@@ -10,7 +10,7 @@ Java Socket library supporting SOCKS and HTTP proxy servers with authentication
 
 # Build Requirements
 
-- Java 17
+- Java 21
 - Maven 3.9
 
 # Runtime Requirements

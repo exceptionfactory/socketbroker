@@ -58,6 +58,13 @@ public class HttpConnectSocketBroker implements SocketBroker {
     private static final String CONNECTION_FAILED = "HTTP Connection Failed: Status [%d] Reason [%s]";
 
     /**
+     * Default constructor for HTTP CONNECT implementation of Socket Broker
+     */
+    public HttpConnectSocketBroker() {
+
+    }
+
+    /**
      * Request connection to remote address through socket connected to HTTP Proxy Server
      *
      * @param socket Socket connected to Proxy Server

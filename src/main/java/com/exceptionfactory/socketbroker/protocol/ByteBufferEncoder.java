@@ -23,6 +23,13 @@ import java.util.Objects;
  */
 public class ByteBufferEncoder implements PacketEncoder<ByteBuffer> {
     /**
+     * Default constructor for Byte Buffer Encoder
+     */
+    public ByteBufferEncoder() {
+
+    }
+
+    /**
      * Get encoded buffer after rewinding and read byte array based on the buffer limit length
      *
      * @param buffer Byte Buffer to be read

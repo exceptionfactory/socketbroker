@@ -46,6 +46,13 @@ public class BasicProxyAuthorizationProvider implements ProxyAuthorizationProvid
     private static final int SEPARATOR_LENGTH = 1;
 
     /**
+     * Default constructor for HTTP Basic implementation of Proxy Authorization Provider
+     */
+    public BasicProxyAuthorizationProvider() {
+
+    }
+
+    /**
      * Get Proxy Authorization Credentials formatted according to RFC 7617 Section 2
      *
      * @param authenticationCredentials Authentication Strategies

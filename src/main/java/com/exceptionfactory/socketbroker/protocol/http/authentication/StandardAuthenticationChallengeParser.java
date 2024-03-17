@@ -39,6 +39,13 @@ public class StandardAuthenticationChallengeParser implements AuthenticationChal
     private static final String VALUE_GROUP = "value";
 
     /**
+     * Default constructor for Standard Authentication Challenge Parser
+     */
+    public StandardAuthenticationChallengeParser() {
+
+    }
+
+    /**
      * Get Authentication Challenge from challenge source containing scheme and parameters
      *
      * @param challenge HTTP header value required

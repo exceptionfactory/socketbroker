@@ -58,6 +58,13 @@ public class Socks5SocketBroker implements SocketBroker {
     private static final PacketDecoder<SocksReply> REPLY_DECODER = new SocksReplyDecoder();
 
     /**
+     * Default constructor for SOCKS5 implementation of Socket Broker
+     */
+    public Socks5SocketBroker() {
+
+    }
+
+    /**
      * Connect to SOCKS server using provided Socket and request connection to the specified remote address
      *
      * @param socket Socket configured with remote address of SOCKS server

@@ -27,6 +27,13 @@ public class UnicodeStandardCharacterArrayEncoder implements PacketEncoder<char[
     private static final PacketEncoder<ByteBuffer> BYTE_BUFFER_ENCODER = new ByteBufferEncoder();
 
     /**
+     * Default constructor for Byte Buffer Encoder
+     */
+    public UnicodeStandardCharacterArrayEncoder() {
+
+    }
+
+    /**
      * Get bytes encoded using UTF-8
      *
      * @param characters Characters to be encoded
