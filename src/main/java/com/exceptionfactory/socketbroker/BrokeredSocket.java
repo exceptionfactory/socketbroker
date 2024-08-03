@@ -32,7 +32,7 @@ import java.util.Objects;
 /**
  * Brokered Socket encapsulates Proxy Socket connectivity and provides access to connected Socket properties
  */
-public class BrokeredSocket extends Socket {
+public final class BrokeredSocket extends Socket {
     private static final int PORT_DISCONNECTED = 0;
 
     private static final int TIMEOUT_DISABLED = 0;
